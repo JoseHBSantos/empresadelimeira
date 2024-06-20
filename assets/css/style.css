@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+/* 
+Regra é um conjunto de propriedades agrupada em torno de uma tag, classe ou ID
+
+Propriedades permitem alterar comportamentos de tags, aplicando valores de acordo com a sua especialidade.
+
+A propriedade é composta pelo "nome-da-propriedade: valor;"
+ */
+
+ *{
+    margin: 0; /*margem externa*/
+    padding: 0; /*margem interna*/
+    box-sizing: border-box;  /* Considera 100% como o todo */
+ }
+
+ /* FORMATAÇÃO DAS TAGS PRINCIPAIS */
+
+ /* Redefine o tamanho da fonte root para facilitar o calculo da fonte REM */
+ html {
+    font-size: 10px;
+ }
+
+body {
+    font-family: Kalam, Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+}
+
+h1 {
+    font-size: 3.2rem;
+    color: #343a40;
+    border-bottom: 2px solid #aaa;
+    margin-top: 50px;
+    margin-bottom: 40px;
+
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 2.8rem;
+    color: #343a40;
+}
+
+h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+    color: #343a40;
+}
+
+p {
+    font-size: 1.8rem; /* Nesse caso, 1.7 rem = 17px */
+    line-height: 150%; /* Serve para alterar o espaçamento entre linhas */
+
+}
+
+/* FORMATAÇÃO DO CABEÇALHO*/
+header {
+    padding: 10px 20px 10px 20px; /* top, right, bottom, left*/
+    background-color: #343a40;
+}
+
+/* formata a tag <a> dentro de <header> */ 
+header a {
+    font-size: 1.5rem;
+    padding-left: 20px;          /*controla a margem interna esquerda de cada <a>*/
+    color: #FFF;              /*cor da fonte (letra)*/
+    text-transform: uppercase;  /*texto todo maiúsculo*/
+    text-decoration: none;      /*tira o underline*/
+    font-weight: bold;          /*negrito*/
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    width: 1366px;
+    margin: 0px auto;               /* centraliza*/
+    display: flex;                  /*muda para o flexbox*/
+    justify-content: space-between; /*distribui para as margens extremas*/
+    align-items: center;            /* alinha verticalmente */
+
+}
+
+nav img {
+    border-radius: 50px;            /*arredondamento dos cantos*/
+}
+
+/* FORMATAÇÃO DA SEÇÃO DA IMAGEM DO CABEÇALHO */
+
+/* Para criar classes no CSS, utiliza-se o (.) + o nome da classe */
+
+.imagem_cabecalho img {
+    width: 100%;
+}
+
+/*FORMATAÇÃO DA PÁGINA INICIAL*/
+
+main {
+    width: 1366px;
+    margin: 0px auto 50px auto;               /* centraliza*/
+    min-height: 1000px;
+}
+
+.cards_home {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;                  /* ativa o modo flexbox */
+    flex-wrap: wrap;
+    justify-content: space-between; /* distribui o espaço ENTRE os elementos */
+}
+
+.card {
+    width: 31%;
+    margin-bottom: 30px;            /* espaçamento inferior */
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.card h3, .card p {
+    margin: 10px;
+}
+
+/* FORMATAÇÃO DO RODAPÉ */
+
+footer{
+    font-size: 1.6rem;
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0px;
+}
+
+footer .footer_content{
+    width: 1366px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_social a {
+    color: #FFF;
+    font-size: 1.8rem;
+    margin-right: 10px;
+}
+
+.footer_social a:hover {
+    color: #0099ff;
+}
+
+/* Formatação da página empresa */
+
+article li {
+    font-size: 1.8rem; /* Nesse caso, 1.7 rem = 17px */
+    line-height: 150%; /* Serve para alterar o espaçamento entre linhas */
+}
+
+article ul, article ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+article {
+    display: flex;
+    justify-content: space-between;
+}
+
+article div:first-child {
+    width: 55%;
+    margin-right: 30px;
+}
+
+article div:last-child {
+    width: 45%;
+}
+
+article img {
+    width: 100%;
+    height: 800px;
+    border-radius: 15px;
+}
+
+article div img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Formatação da galeria de fotos */
+
+.galeria_destaque {
+    margin: 50px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+.galeria_destaque img {
+    width: 60%;
+}
+
+.galeria_miniaturas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.galeria_miniaturas img {
+    width: 130px;
+}
+
+.galeria_miniaturas img:hover {
+    cursor: pointer;                /* muda o cursor */
+}
+
+/* Formatação da Página de Serviços */
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* como ele trata a separação de células na tabela */
+}
+
+th,td {
+    font-size: 1.8rem;
+    text-align: start;
+    padding: 10px;
+}
+
+th:nth-child(3),
+td:nth-child(3){
+    text-align: end;
+}
+
+th:nth-child(4),
+td:nth-child(4){
+    text-align: center;
+}
+
+.tabela1 td {
+    border: 2px solid #777;
+}
+
+.tabela2 th {
+    border-bottom: 3px solid #333;
+}
+
+.tabela2 td {
+    border-bottom: 1px solid #bbb;
+}
+
+.tabela3 tr:nth-child(odd) {                /* odd = ímpar | even = par */
+    background-color: #ccc;
+}
+
+.tabela3 th {
+    background-color: #333;
+    color: #FFF;
+}
+
+/* Formatação do Formulário */
+
+#form1 {
+    font-size: 1.7rem;
+}
+
+#form1 div {
+    margin-top: 20px;
+}
+
+#form1 label {
+    display: block;                         /* a tag label é inline, então altera para bloco */
+    text-transform: uppercase;
+}
+
+#form1 input[type=text], 
+#form1 input[type=email],
+#form1 textarea{
+
+    padding: 10px;
+    width: 33%;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+}
+
+#form1 select {
+    padding: 8px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+}
+
+#form1 input[type=submit] {
+    padding: 10px;
+    font-size: 1.6rem;
+    border-style: none;
+    background-color: #072341;
+    color: #FFF;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#form1 input[type=submit]:hover {
+    background-color: #555;
+}
+
+
+/* media queries */
+
+@media screen and (max-width:1000px) {
+
+    nav {
+        width: 100%;
+        display: block;             /*tira o flex e volta para block */
+    }
+
+    nav span {
+        display: block;
+    }
+
+    nav span:last-child{
+        margin-top: 10px;
+    }
+
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+
+    footer .footer_content{
+        width: 100%;
+    }
+
+    .cards_home {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2.5rem;    
+    }
+
+    article {
+        flex-direction: column-reverse;
+    }
+    
+    article div:first-child {
+        width: 100%;
+    }
+    
+    article div:last-child {
+        width: 100%;
+    }
+
+    article img {
+        height: 250px;
+    }
+
+    .galeria_miniaturas {
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        column-gap: 1%;     /* espaçamento entre as colunas */
+        row-gap: 5px;       /* espaçamento entre as linhas */
+    }
+    
+    .galeria_miniaturas img {
+        width: 24%;
+    }
+
+    iframe, video {
+        width: 100%;
+        height: 300px;
+    }
+
+    #form1 input[type=text], 
+    #form1 input[type=email],
+    #form1 textarea{
+    width: 100%;
+    border-radius: 8px;
+}
+}
